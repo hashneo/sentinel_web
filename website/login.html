@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-3">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputUser" class="sr-only">Email address</label>
+        <input type="text" id="inputUser" name="username" class="form-control" placeholder="Username" required autofocus>
+        <br/>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+        <!--
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        -->
+        <br/>
+        <button id="page-sign-in" class="btn btn-lg btn-primary btn-block">Sign in</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $("#page-sign-in").click( function(e){
+
+        var u = $("#inputUser").val();
+        var p = $("#inputPassword").val();
+
+        Sentinel.auth.login( u, p,
+            function(){
+                localStorage.setItem('SENTINEL_AUTH', Cookies.get('SENTINEL_AUTH'));
+                //document.cookie = 'SENTINEL_AUTH' + '=; Max-Age=-99999999;';
+                location.reload();
+            },
+            function(){
+                window.alert('Invalid Credentials');
+            })
+    });
+
+</script>

@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sentinel-web
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: app
+    context: sentinel
+    version: v1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sentinel-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+        context: sentinel
+        version: v1
+    spec:
+      containers:
+      -
+        name: app
+        image: docker.io/hashneo/sentinel-web-x86_64:latest
+        imagePullPolicy: Always
+        env:
+        - name: PORT
+          value: "5000"
+        - name: CONSUL
+          value: "consul"
+        - name: NEW_RELIC_NO_CONFIG_FILE
+          value: "true"
+        - name: NEW_RELIC_ENABLED
+          value: "true"
+        - name: NEW_RELIC_APP_NAME
+          value: "Sentinel Web"
+        - name: NEW_RELIC_LICENSE_KEY
+          value: ""
+        ports:
+        -
+          containerPort: 5000
+          protocol: TCP
+      nodeSelector:
+        beta.kubernetes.io/arch: amd64

@@ -1,0 +1,323 @@
+/*
+body {
+  padding-top: 50px;
+  color: rgb(157, 157, 157);
+  background-color: rgb(34, 34, 34);
+}
+.container-content {
+  padding: 40px 15px;
+  text-align: left;
+}
+*/
+body {
+    font-weight:lighter;
+}
+
+*:focus {
+    outline: none;
+}
+
+#main{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+textarea.editor{
+    width:100%;
+    height:100%;
+    padding: 10px
+}
+
+
+.dlg-pin-entry > .modal-dialog{
+  width: 280px;
+}
+
+.dlg-arm-mode > .modal-dialog{
+  width: 360px;
+}
+
+div.temperature{
+    font-size:75px;
+    color:rgb(255,255,255);
+}
+
+div.widget{
+    padding:15px 15px 15px 15px;
+    background-color: rgb(0,0,0);
+    width:200px;
+}
+
+div.widget > .form-group > div{
+    width: 50%;
+    margin: 0 auto;
+}
+
+div.widget > .form-group{
+    text-align : center;
+}
+
+div.temperature-buttons{
+    margin-top:20px;
+}
+
+div.temperature-current{
+    font-size:15px;
+}
+
+.modal{
+    display: flex !important;
+    height: 100%;
+}
+.modal .modal-dialog{
+    margin: auto;
+}
+
+.checkbox-water{
+    width:100px;
+}
+
+.bootstrap-dialog .modal-header{
+    border-top-left-radius : 0;
+    border-top-right-radius : 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.pin4{
+    font-size:40px;
+    width:200px;
+    margin-left:20px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family:'courier';
+    color:black;
+}
+
+.alarm-arm > div.pin{
+    margin-left:30px;
+    margin-top:10px;
+}
+
+div.pin > label{
+    margin-top:10px;
+    margin-left:20px;
+    color:black;
+    font-size:14px;
+    font-weight:bold;
+}
+
+div.pin > label > input{
+    margin-right:5px;
+}
+
+.store-pin{
+    margin-left:20px;
+}
+
+.tile > a > h4 {
+    font-size:15px;
+    margin-top:7px;
+}
+
+.camera-row {
+    margin-top: 10px;
+}
+
+form > div > img {
+    margin-top: 20px;
+}
+
+.dlg-color-selector > .modal-dialog{
+    width:90%;
+}
+
+.bootstrap-dialog-message > div{
+    width:100%;
+    height:100%;
+}
+
+.color-slider{
+    margin-left:15px;
+}
+
+.color-pane{
+    width: 100px;
+    margin-left: 202px
+}
+
+.inl-blk{
+    display:inline-block;
+}
+
+#slider_r .slider-handle {
+    background: red;
+}
+
+#slider_b .slider-handle {
+    background: blue;
+}
+
+#slider_g .slider-handle {
+    background: green;
+}
+
+#slider_w .slider-handle {
+    background: black;
+}
+
+.color-pane{
+    border:1px solid;
+    margin-top: 10px;
+    margin-left: 10px;
+    width:100px;
+    height:150px;
+}
+
+body.modal-open {
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+}
+
+.btn-color{
+    height: 40px;
+    width: 40px;
+    margin-left:20px;
+}
+
+#page-cameras > .btn {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.tile-battery {
+    float:right;
+}
+
+.sensor-battery {
+    padding-left:10px;
+    margin-top:3px;
+}
+
+.sensor-temperature {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+label.sensor-label {
+    font-size: 20px;
+}
+
+span.energy-date{
+    padding-left: 20px;
+    padding-right:20px;
+    font-size: 20px;
+}
+
+button.energy-date{
+
+}
+@media (min-width: 0px) and (max-width: 1023px) {
+    label.sensor-label {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+    .btn-group-lg > .btn {
+        padding: 20px 25px;
+        font-size: 26px;
+        line-height: 1.33;
+        border-radius: 1px;
+    }
+
+    .toggle.btn-lg {
+        min-width: 150px;
+        min-height: 65px;
+    }
+
+    .toggle-on.btn-lg {
+        padding-right: 31px;
+        padding-top: 13px;
+    }
+
+    .toggle-off.btn-lg {
+        padding-left: 31px;
+        padding-top: 13px;
+    }
+
+    .toggle-handle.btn-lg {
+        width: 40px;
+    }
+
+    label {
+        font-size : 26px
+    }
+
+    .btn {
+        font-size : 26px
+    }
+
+    .bootstrap-dialog-message, .bootstrap-dialog-title {
+        font-size : 26px !important
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+    label.sensor-label{
+        font-size:20px;
+    }
+
+    .slider.slider-horizontal {
+        width: 95%;
+        height: 40px;
+        margin-top: 8px;
+    }
+
+    .slider.slider-horizontal .slider-track {
+        height: 10px;
+        width: 100%;
+        margin-top: -5px;
+        top: 50%;
+        left: 0;
+    }
+
+    .slider.slider-horizontal .slider-tick,
+    .slider.slider-horizontal .slider-handle {
+        margin-left: -20px;
+        margin-top: -15px;
+    }
+
+    .slider.slider-vertical {
+        height: 210px;
+        width: 20px;
+    }
+
+    .slider.slider-vertical .slider-tick,
+    .slider.slider-vertical .slider-handle {
+        margin-left: -15px;
+        margin-top: -20px;
+    }
+
+    .slider-handle {
+        width: 40px;
+        height: 40px;
+        opacity:8;
+    }
+
+}

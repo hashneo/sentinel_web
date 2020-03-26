@@ -1,0 +1,17 @@
+FROM hypriot/rpi-node
+
+RUN apt-get update && apt-get install -y vim nginx iputils-ping net-tools && rm -rf /var/cache/apk/*
+RUN mkdir -p /tmp/nginx/client-body
+
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+COPY website /usr/share/nginx/html
+
+RUN npm install bower -g
+
+WORKDIR /usr/share/nginx/html
+
+RUN  bower install --allow-root
+
+EXPOSE 5000
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,36 @@
+{
+  "name": "html",
+  "homepage": "https://github.com/hashneo/sentinel",
+  "authors": [
+    "Steven Taylor <steven.taylor@me.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "metro-bootstrap": "*",
+    "knockout": "~3.4.0",
+    "bootstrap-toggle": "~2.2.1",
+    "bootstrap3-dialog": "bootstrap-dialog#~1.34.9",
+    "knockout-mapping": "~2.4.1",
+    "requirejs": "https://github.com/jrburke/requirejs.git#~2.1.22",
+    "font-awesome": "^4.5.0",
+    "seiyria-bootstrap-slider": "~7.0.3",
+    "bootstrap-colorpicker": "^2.3.6",
+    "jscolor": "^1.4.2",
+    "moment": "^2.18.1",
+    "js-cookie": "^2.2.0"
+  },
+  "resolutions": {
+    "font-awesome": "^4.5.0"
+  }
+}
