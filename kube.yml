@@ -10,7 +10,7 @@ spec:
     protocol: TCP
     targetPort: 5000
   selector:
-    app: app
+    app: web
     context: sentinel
     version: v1
 ---
@@ -22,11 +22,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app
+      app: web
   template:
     metadata:
       labels:
-        app: app
+        app: web
         context: sentinel
         version: v1
     spec:

@@ -6,4 +6,4 @@ newrelic_agent.log
 nginx/nginx-debug.conf
 nginx/nginx-live.conf
 *.sh
-custom
+/custom
