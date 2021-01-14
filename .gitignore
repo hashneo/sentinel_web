@@ -7,3 +7,4 @@ nginx/nginx-debug.conf
 nginx/nginx-live.conf
 *.sh
 /custom
+package-lock.json
